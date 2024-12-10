@@ -1,0 +1,56 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files
+
+# ------- FRONTEND -------
+
+# Dependencies
+client/node_modules/
+client/.pnp
+client/.pnp.*
+client/.yarn/*
+!client/.yarn/patches/
+!client/.yarn/plugins/
+!client/.yarn/releases/
+!client/.yarn/versions/
+
+# Testing
+client/coverage/
+
+# Next.js
+client/.next/
+client/out/
+
+# Production
+client/build/
+
+# Miscellaneous
+client/.DS_Store
+client/*.pem
+
+# Debug logs
+client/npm-debug.log*
+client/yarn-debug.log*
+client/yarn-error.log*
+
+# Environment files (can opt-in for committing if needed)
+client/.env*
+
+# Vercel
+client/.vercel/
+
+# TypeScript
+client/*.tsbuildinfo
+client/next-env.d.ts
+
+
+
+# ------- BACKEND -------
+
+server/__pycache__/
+server/env/
+server/venv/
+server/.env
+server/*.log
+server/.mypy_cache/
+server/.pytest_cache/
+server/.coverage
+server/db.sqlite3     # Example SQLite database file

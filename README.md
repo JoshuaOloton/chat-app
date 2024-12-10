@@ -1,0 +1,1 @@
+## Chat App built with Next.js+Typescript+Tailwind.css and FastAPI+Sockets
