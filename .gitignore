@@ -45,7 +45,7 @@ client/next-env.d.ts
 
 # ------- BACKEND -------
 
-server/__pycache__/
+server/**/__pycache__/
 server/env/
 server/venv/
 server/.env

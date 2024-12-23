@@ -1,0 +1,30 @@
+# Node modules (already handled by npm/yarn in Dockerfile)
+node_modules
+
+# Logs
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+pnpm-debug.log
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Environment files (use Docker secrets instead)
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+.env.*.local
+
+# Editor settings and configs
+.idea
+.vscode
+*.swp
+*.swo
+
+# Git
+.git
+.gitignore
