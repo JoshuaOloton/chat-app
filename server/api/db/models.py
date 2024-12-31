@@ -15,7 +15,6 @@ class ModelBase(Base):
 class User(ModelBase):
     __tablename__ = 'users'
     email = Column(String, unique=True, index=True, nullable=False)
-    username = Column(String, unique=True, index=True, nullable=False)
     fullname = Column(String, nullable=False)
     password = Column(String, nullable=False)
 

@@ -21,13 +21,8 @@ services:
       - "8001:8000"
     volumes:
       - ./server:/app
-    environment:
-      - DB_URL=postgresql://postgres:postgres@db:5432/postgres
-      - ACCESS_TOKEN_EXPIRE_MINUTES=30
-      - REFRESH_TOKEN_EXPIRE_MINUTES=10080
-      - ALGORITHM=HS256
-      - JWT_SECRET_KEY=e374df489f68a74dbbde13f8095d22507620d3efb632e7099304617dd25d0d69
-      - JWT_REFRESH_SECRET_KEY=551594a8bbc6fc79c2eb81c2258d54f37f5aeed32be94921252cee01adf3a285
+    env_file:
+      - ./server/.env
     depends_on:
       - db
 

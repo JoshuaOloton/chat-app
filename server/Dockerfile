@@ -1,5 +1,9 @@
 FROM python:3.12-alpine
 
+# Install system dependencies
+RUN apk add --no-cache \
+    libpq-dev gcc musl-dev python3-dev postgresql-dev
+
 # Set the working directory in the container
 WORKDIR /app
 

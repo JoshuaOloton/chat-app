@@ -15,7 +15,7 @@ class UserAuth(BaseModel):
     model_config = ConfigDict(from_attributes=True)
 
     email: str
-    username: str
+    fullname: str
 
 
 class LoginResponse(BaseModel):
@@ -28,14 +28,13 @@ class LoginResponse(BaseModel):
 
 class RegisterBase(BaseModel):
     email: str
-    username: str
+    fullname: str
     password: str
 
 class UserResponse(BaseModel):
     model_config = ConfigDict(from_attributes=True)
 
     email: str
-    username: str
     fullname: str
 
 
@@ -43,4 +42,13 @@ class RegisterResponse(BaseModel):
     model_config = ConfigDict(from_attributes=True)
 
     message: str
+    access_token: str
+    token_type: str
     user: UserAuth
+
+
+class RefreshTokenResponse(BaseModel):
+    model_config = ConfigDict(from_attributes=True)
+
+    access_token: str
+    token_type: str

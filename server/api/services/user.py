@@ -11,3 +11,7 @@ class UserService:
     @staticmethod
     def get_all_users(db: Session) -> List[User]:
         return db.query(User).all()
+    
+    @staticmethod
+    def get_all_users_except_me(db: Session, current_user: User) -> List[User]:
+        return db.query(User).filter(User.id != current_user.id).all()
